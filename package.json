@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@metaplex-foundation/js": "^0.13.3",
-    "@solana/web3.js": "^1.50.1"
+    "@solana/web3.js": "^1.50.1",
+    "axios": "^0.27.2"
   }
 }
