@@ -1,10 +1,7 @@
 import fs from "fs";
 import axios from "axios";
 
-const sleep = async () => {
-    const promise = new Promise(resolve => setTimeout(resolve, 3000));
-    await promise();
-}
+const sleep = () => new Promise(resolve => setTimeout(resolve, 3000));
 
 const main = async () => {
     var i;
