@@ -4,6 +4,7 @@ import axios from "axios";
 const sleep = () => new Promise(resolve => setTimeout(resolve, 3000));
 
 const main = async () => {
+    fs.writeFileSync('output1.txt', "");
     var i;
     for (i = 0; i < 9500; i += 25) {
         let output = "";
@@ -13,7 +14,7 @@ const main = async () => {
             result.data.forEach(token => {
                 output += token.info.mint + "\n";
             });
-            fs.appendFileSync('output.txt', output);
+            fs.appendFileSync('output1.txt', output);
         }
         catch(err) {
             i -= 25;
