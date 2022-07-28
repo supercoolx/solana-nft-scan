@@ -1,0 +1,19 @@
+{
+  "name": "collections",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "metaplex"
+  ],
+  "type": "module",
+  "author": "supercoolx",
+  "license": "ISC",
+  "dependencies": {
+    "@metaplex-foundation/js": "^0.13.3",
+    "@solana/web3.js": "^1.50.1"
+  }
+}
