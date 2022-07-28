@@ -16,7 +16,7 @@ const main = async () => {
             result.data.forEach(token => {
                 output += token.info.mint + "\n";
             });
-            fs.appendFileSync('output.json', output);
+            fs.appendFileSync('output.txt', output);
         }
         catch(err) {
             i -= 25;
