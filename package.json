@@ -9,7 +9,6 @@
   "keywords": [
     "metaplex"
   ],
-  "type": "module",
   "author": "supercoolx",
   "license": "ISC",
   "dependencies": {

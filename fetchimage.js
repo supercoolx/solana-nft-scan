@@ -1,5 +1,5 @@
-import download from "download";
-import metadata from "metadata.json"
+const download = require("download");
+const metadata = require("./metadata.json");
 
 const sleep = () => new Promise(resolve => setTimeout(resolve, 3000));
 
