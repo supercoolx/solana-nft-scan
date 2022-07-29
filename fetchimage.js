@@ -2,7 +2,7 @@ const fs = require('fs');
 const URL = require('url');
 const path = require('path');
 const download = require("download");
-const metadata = require("./metadata.json");
+const urls = require("./imageurls.json");
 
 const sleep = () => new Promise(resolve => setTimeout(resolve, 3000));
 
@@ -19,8 +19,8 @@ const downloadImage = async (url) => {
 
 const main = async () => {
     let i = 0;
-    for (let data of metadata) {
-        await downloadImage(data.image);
+    for (i = 0; urls[i]; i++) {
+        await downloadImage(urls[i]);
     }
 }
 
