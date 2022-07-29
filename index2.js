@@ -7,6 +7,8 @@ const MINTER = "BRAiNSRTXfk6Rx95FAfsQVAfDctgqNR6PrYAxsa3sjhv";
 
 const sleep = () => new Promise(resolve => setTimeout(resolve, 3000));
 
+fs.writeFileSync("output2.txt", "");
+
 let number = 0;
 const getData = async mint => {
     console.log(number);
