@@ -13,7 +13,9 @@ const downloadImage = async (url) => {
 };
 
 const main = async () => {
+    let i = 0;
     for (let data of metadata) {
+        console.log(i++);
         await downloadImage(data.image);
     }
 }
