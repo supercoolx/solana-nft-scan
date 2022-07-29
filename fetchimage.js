@@ -1,3 +1,4 @@
+const fs = require('fs');
 const download = require("download");
 const metadata = require("./metadata.json");
 
@@ -7,8 +8,7 @@ const downloadImage = async (url) => {
     try {
         await download(url, 'assets');
     } catch (err) {
-        await sleep();
-        await downloadImage(url);
+        fs.appendFileSync('error.log', url + '\n');
     }
 };
 
