@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "heroku-prebuild": "npm i -g serve",
+    "start": "serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
