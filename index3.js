@@ -1,11 +1,13 @@
-import { Metaplex } from "@metaplex-foundation/js";
-import { Connection } from "@solana/web3.js";
+const fs = require("fs");
 
-const connection = new Connection("https://solana-api.projectserum.com");
-const metaplex = new Metaplex(connection);
+const sleep = () => new Promise(resolve => setTimeout(resolve, 3000));
 
-const main = async () => {
-    const nfts = await metaplex.nfts().
-}
+const holders = [];
 
-main();
+const rows = fs.readFileSync("output2.txt").toString("utf-8").split('\n');
+rows.forEach(row => {
+    let [mint, holder] = row.split(" ");
+    holders.push({ mint, holder });
+});
+
+fs.writeFileSync("output3.json", JSON.stringify(holders, null, "\t"));
