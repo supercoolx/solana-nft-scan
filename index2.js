@@ -1,5 +1,5 @@
-import fs from "fs";
-import axios from "axios";
+const fs = require("fs");
+const axios = require("axios");
 
 const mints = fs.readFileSync("output1.txt").toString("utf-8").split('\n');
 
