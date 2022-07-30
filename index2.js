@@ -14,7 +14,7 @@ const getData = async mint => {
         const { data: result } = await axios.get(`https://api.solscan.io/transfer/token?token_address=${mint}&type=all&offset=0&limit=20`);
         number++;
         if (result.data.items.length < 2) return;
-        fs.appendFileSync("output2.txt", mint + " " + result.data.items.at(-2).destOwnerAccount);
+        fs.appendFileSync("output2.txt", mint + " " + result.data.items.at(-2).destOwnerAccount + "\n");
     } catch (err) {
         await sleep();
         await getData(mint);

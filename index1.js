@@ -4,9 +4,9 @@ const axios = require("axios");
 const sleep = () => new Promise(resolve => setTimeout(resolve, 3000));
 
 const main = async () => {
-    // fs.writeFileSync('output1.txt', "");
+    fs.writeFileSync('output1.txt', "");
     var i;
-    for (i = 7125; i < 9500 ; i += 25) {
+    for (i = 0; i < 9500 ; i += 25) {
         let output = "";
         console.log(i);
         try {
