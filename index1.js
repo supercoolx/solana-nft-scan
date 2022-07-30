@@ -1,5 +1,5 @@
-import fs from "fs";
-import axios from "axios";
+const fs = require("fs");
+const axios = require("axios");
 
 const sleep = () => new Promise(resolve => setTimeout(resolve, 3000));
 
