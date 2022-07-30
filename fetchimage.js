@@ -4,7 +4,7 @@ const path = require('path');
 const download = require("download");
 const urls = require("./imageurls.json");
 
-const sleep = () => new Promise(resolve => setTimeout(resolve, 10000));
+const sleep = () => new Promise(resolve => setTimeout(resolve, 5000));
 
 const downloadImage = async (url) => {
     try {
