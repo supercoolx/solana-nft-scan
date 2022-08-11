@@ -2,15 +2,13 @@ const fs = require("fs");
 const holders = require("./output3.json");
 const whitelist = require("./dogtags_1.json");
 
-const list = holders.map(x => x.holder);
+const list = [];
+holders.forEach(x => list.push(...x.holders));
 
 const output = [];
 whitelist.forEach(x => {
-    let NFTsend = list.includes(x.wallet);
-    output.push({
-        wallet: x.wallet,
-        NFTsend
-    });
+    if(list.includes(x.wallet)) return;
+    output.push(x.wallet);
 });
 
 
