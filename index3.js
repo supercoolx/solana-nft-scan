@@ -2,12 +2,13 @@ const fs = require("fs");
 
 const sleep = () => new Promise(resolve => setTimeout(resolve, 3000));
 
-const holders = [];
+const result = [];
 
 const rows = fs.readFileSync("output2.txt").toString("utf-8").split('\n');
 rows.forEach(row => {
-    let [mint, holder] = row.split(" ");
-    holders.push({ mint, holder });
+    let [mint, holderList] = row.split(" ");
+    const holders = holderList ? holderList.split("-").reverse() : [];
+    result.push({ mint, holders });
 });
 
-fs.writeFileSync("output3.json", JSON.stringify(holders, null, "\t"));
+fs.writeFileSync("output3.json", JSON.stringify(result, null, "\t"));
